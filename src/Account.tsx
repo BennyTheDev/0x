@@ -33,7 +33,7 @@ export default class Account extends React.Component<Props, {}> {
     fetchAccountDetailsAsync = async () => {
         // Get the Available Addresses from the Web3 Provider inside of ZeroEx
         const addresses = await this.props.zeroEx.getAvailableAddressesAsync();
-        
+        console.log(addresses);
         // Request all of the tokens and their details from the 0x Token Registry
         const tokens = await this.props.zeroEx.tokenRegistry.getTokensAsync();
         console.log(DOMTokenList);
